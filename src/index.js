@@ -6,6 +6,9 @@ const app = express();
 const port = 3000;
 
 
+//confict static
+app.use(express.static(path.join(__dirname,"public")))
+
 //HTTP Logger
 app.use(morgan('combined'))
 
