@@ -9,6 +9,9 @@ self-study-from-f8-education \
 
 **Hướng dẫn run app** \
  \
- **To install package** \
- `npm install` 
+ -   To run app
+
+```
+yarn dev
+```
  
