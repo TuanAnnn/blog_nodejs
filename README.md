@@ -9,5 +9,5 @@ self-study-from-f8-education \
 
 **Hướng dẫn run app** \n
  \
- <a name="To install package"></a> \
+ `*To install package*` \
  
