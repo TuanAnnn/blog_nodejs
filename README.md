@@ -8,7 +8,6 @@ self-study-from-f8-education \
  <https://fullstack.edu.vn/learning/nodejs> 
 
 **Hướng dẫn run app** \
- \
  -   To install package
 
 ```
