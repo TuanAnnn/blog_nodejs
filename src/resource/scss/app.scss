@@ -1,8 +1,14 @@
 @import 'variable';
 
 h1{
-    color: $red-color;
+    color: black;
 }
 h2 {
     color: green;
+}
+card-items {
+    margin-left: 20;
+}
+cost-text {
+    color: red;
 }
