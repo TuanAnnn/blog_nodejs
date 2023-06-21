@@ -5,6 +5,8 @@ const {engine} =  require('express-handlebars');
 const app = express();
 const port = 3000;
 const route = require('./routers')
+const moment = require('moment');
+const methodOverride = require('method-override')
 
 
 const db = require('./config/db') 
@@ -25,10 +27,18 @@ app.use(express.urlencoded({
   extended:true
 }))
 app.use(express.json())
-
+app.use(methodOverride('_method'))
 //Template engine
 app.engine('hbs', engine({
-  extname:'hbs'
+  extname:'hbs',
+  helpers: {
+    sum:(a,b)=>{
+      return a + b
+    },
+    formatdata:(date)=>{
+      return moment(date).format('LLLL')
+    }
+  }
 }));
 
 app.set('view engine', 'hbs');
