@@ -11,6 +11,28 @@ class MeControllers {
       })
       .catch(next);
   }
+  trashcourses(req, res, next) {
+    Course.findDeleted({deleted: true})
+      .then((courses) => {
+        res.render("me/trash-courses", {
+          courses: multiMongooseToObject(
+            courses.filter((course) => course.deleted)
+          ),
+        });
+      })
+      .catch(next);
+  }
+  // trashCourses(req, res, next) {
+  //   Course.findDeleted({ deleted: true })
+  //     .then((courses) =>
+  //       res.render("me/trash-courses", {
+  //         courses: multiMongooseToObject(
+  //           courses.filter((course) => course.deleted === true)
+  //         ),
+  //       })
+  //     )
+  //     .catch(next);
+  // }
 }
 
 module.exports = new MeControllers();
